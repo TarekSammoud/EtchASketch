@@ -1,23 +1,22 @@
-let boxNB = 16 ; 
-
-function howManyBoxes ()
+function removeallchildnodes(parent)
 {
-
-    const input = document.getElementById("size") ; 
-    input.addEventListener('input',function () {
-        boxNB = this.value ; 
-        console.log(boxNB) ;
-    })
-
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild) ;
+    }
 }
 
-function setBoxSize()
+
+function setBoxSize(boxNB)
 {
     const container = document.querySelector('.container') ; 
     const contHeight = parseInt(getComputedStyle(container).height) ;
     const contWidth= parseInt(getComputedStyle(container).width);
     
-    var boxlength = Math.sqrt((contHeight*contWidth  / boxNB )) - 3  ; 
+
+
+    var boxlength = Math.sqrt((contHeight*contWidth  / boxNB ))   ; 
+
+
     const squares= document.querySelectorAll('.box')
 
     squares.forEach(square => { 
@@ -32,10 +31,11 @@ function setBoxSize()
 }
 
 
-function createGrid()
+function createGrid(boxNB)
 {
     const main=document.querySelector('.container') ; 
-    howManyBoxes ()
+    removeallchildnodes(main)
+
     for (let i =0 ;i<boxNB ; i++)
     {
         const newT = document.createElement('div') ; 
@@ -58,3 +58,4 @@ function changeColor()
 
 
 }
+

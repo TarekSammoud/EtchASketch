@@ -17,16 +17,26 @@
     <div id="menu">
     <div class="container">
     </div>
+    <div class="slider-comment">Adjust Size</div>
     <input id="size" type="range" min="1" max="100" value="16">
 
 </div>
 
-
-
 <script>
-createGrid()
-setBoxSize()
-changeColor()</script>
+    let boxNB = 16;
+    createGrid(boxNB) ; 
+setBoxSize(boxNB) ; 
+changeColor() ;
+const input = document.getElementById("size") ; 
+    input.addEventListener('input',function () {
+        boxNB = this.value ; 
+        console.log(boxNB) ;
+        createGrid(boxNB) ; 
+setBoxSize(boxNB) ; 
+changeColor() ;
+    })
+    
+</script>
 
 
 </body>

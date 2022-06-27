@@ -1,10 +1,23 @@
 html{
-    font-family: 'Montserrat', sans-serif;}
+    font-family: 'Montserrat', sans-serif;
+    background-color: #cccccc;
+}
 
 #title{
     text-align: center;
     font-size: 100px;
+    color: rgb(0, 0, 0) ;
     font-weight: 500;
+}
+
+.slider-comment{
+    margin-top: 30px;
+    margin-bottom : 15px;
+    font-size:30px;
+}
+
+#size {
+    width: 400px;
 }
 
 #menu{
