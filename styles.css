@@ -1,0 +1,38 @@
+html{
+    font-family: 'Montserrat', sans-serif;}
+
+#title{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 500;
+}
+
+#menu{
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width :500px;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-color: red;
+
+
+
+}
+
+
+.box{
+    border:solid ;
+    border-width: 1px;
+    border-color: black;
+    height: 122px;
+    width: 122px;
+
+}
