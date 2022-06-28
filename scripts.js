@@ -53,6 +53,7 @@ function changeColor()
 
 
     const rainbowBtn = document.getElementById('rainbowBtn') ;
+    const paletteBtn = document.getElementById('palette') ;
     const blackBtn = document.getElementById('blackBtn');
     const clearBtn = document.getElementById('clearBtn') ; 
 
@@ -61,6 +62,10 @@ function changeColor()
             square.style.backgroundColor='#cccccc'
         })
     })
+
+    paletteBtn.addEventListener('click',()=>{
+        color = 'custom' ; 
+    }) ;
 
     blackBtn.addEventListener('click',()=>{
         color = 'black' ; 
@@ -80,6 +85,8 @@ function changeColor()
             square.style.backgroundColor = 'black' ; 
             if (color=='rainbow')
             square.style.backgroundColor = hex ; 
+            if (color=='custom')
+            square.style.backgroundColor = paletteBtn.value ;
     
         }) ;
     } ) ;
